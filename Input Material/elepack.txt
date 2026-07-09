@@ -1,0 +1,80 @@
+In questo numero pubblichiamo un programma di un nostro lettore, apparentemente molto grande, ma in realtà dato dall'unione di quattro parti fondamentali accessibili da un menu principale.
+Si tratta di quattro utility nel campo dell'elettronica: la prima consente la tabulazione di valori EIA 10%, in base all'operazione su tali valori (parallelo, serie, paritori,frequenze di risonanza, ecc.).
+La seconda invece consente di contare e  raggruppare per valore i componenti di un circuito, ottenendo l'ordinamento dei valori stessi.
+La terza permette al nostro calcolatore di simulare una calcolatrice elettronica ed infine la quarta consente il tracciamento pseudo-grafico del modulo e della fase di una funzione complessa, ciò che in gergo si chiama il "diagramma di Bode".
+
+Lasciamo dunque la parola al lettore, non prima però di aver fatto alcune piccole considerazioni.
+
+Nella riga 70 compare la funzione FN PC$, che consente il posizionamento assoluto del cursore e corrisponde alla sequenza "ESC = r c" dove" "r" e "c" sono rispettivamente i valori di riga e di colonna aumentati di 32 della posizione in cui si andrà a stampare un carattere nel video.
+
+Per quanto riguarda il valore LCC defìnito nella linea 80 ed usato più volte con l'istruzione "Poke" possiamo dire che può essere tranquillamente trascurato, salvo apportare le dovute modifiche a seconda del personal di cui si dispone.
+
+Elepack: un pacchetto per l'elettronica
+
+di Massimo Corinaldesi, Falconara (AN)
+
+Il pacchetto qui presentato, composto da un gruppo di quattro routine distinte, è stato realizzato per fornire ausilio nella elettronica applicata dagli hobbysti: sovente, infatti, ci si trova nella necessità di disporre di utility pratiche e di facile uso al fine di realizzare o dimensionare un circuito elettronico. ELEPACK è concepito proprio per questo tipo di problemi. Il programma è redatto in Mbasic al fine di preservare la trasportabilità e, per quanto possibile, la facilità di modifica a seconda delle particolari esigenze.
+Una volta lanciato, il programma presenta il menu principale composto da quattro opzioni:
+    1- Tabelle di valori EIA 10%
+    2- Totalizzatore di componenti
+    3 - Calcolatrice
+    4- Diagrammi di Bode
+    9- Fine programma
+che, a parte l'evidente opzione 9, vengono qui di seguito descritte singolarmente.
+
+1 -Tabelle EIA al 10%
+
+Nel dimensionamento di reti elettriche passive (reti RC, LC, ecc.) occorre talvolta determinare il valore di due componenti il cui prodotto, o rapporto, o somma, ecc., sia il più possibile prossimo ad un valore predeterminato: è questo il caso di reti RC di multivibratori, reti LC di circuiti risonanti e simili.
+
+Sapendo che in commercio sono per lo più reperibili componenti RLC i cui valori ricadono entro la serie EIA standard al 10% di tolleranza (E 12), ci si trova a dover scegliere quei valori dei componenti reali che meglio approssimano i dati di progetto. Si può in tal caso ricorrere alla prima routine del pacchetto (linee 330-730) per avere in video una serie di tabelle numeriche ottenute da tutte le possibili coppie di
+ valori E 12 applicando tra loro le operazioni matematiche che più comunemente si incontrano nella progettazione di circuiti analogici.
+
+L'insieme delle tabelle visualizzabili è presentato nel sottomenu della routine:
+
+ 1 paralleli                2 serie
+ 3 part. di tens.           4 prodotti
+ 5 rapporti                 6 freq. natur.       
+ 7 freq. risono                                  
+
+Queste tabelle permettono, a parte il fattore di scala variabile di caso in caso, di selezionare la coppia di componenti ottimale.
+Per semplicità di scrittura della routine e cercando di minimizzare l'impegno di memoria centrale, i calcoli vengono effettuati ogni qualvolta si seleziona una particolare voce del sotto-menu, ciò inoltre agevola l'inserimento di ulteriori tabelle senza peraltro penalizzare troppo la velocità di esecuzione qui non particolarmente importante.
+Si noti come la generazione della tabella dei partitori, ove viene richiesto il valore della tensione di ingresso, non è "a prova di errore" a causa della natura necessariamente formattata che assume la presentazione in video dei risultati: sarà perciò richiesta una certa attenzione nella scelta del valore introdotto al fine di non compromettere la leggibilità della videata.
+
+2 - Totalizzatore di componenti
+
+Compresa dalla linea 770 alla linea 1260, questa routine risponde alla necessità pratica di determinare, dato un circuito elettronico che si intende realizzare, quanti e quali sono i componenti simili tra loro: esempio quanti sono i resistori da 1 kohm, o quanti sono i condensatori da 4.7 nF, ecc.
+Il totalizzatore accetta i valori dei singoli componenti (non necessariamente valori standard e comunque senza unità di misura) in qualsiasi successione, presentandone poi la lista ordinata su valori crescenti includendo il numero delle unità presenti per ogni valore.
+Dato il numero relativamente basso di componenti che possono far parte di uno schema anche complesso, non è stato impiegato un metodo evoluto per effettuare il sort dei valori. Inoltre, benché sarebbe probabilmente stato utile, la routine non è stata dotata della possibilità di differenziare, ad esempio, tra resistori di differente wattaggio o natura; ciò deriva dal fatto che ogni singolo componente può essere descritto soltanto da un numero, che naturalmente è bene far coincidere col proprio valore caratteristico (es. la resistenza nel caso di un resistore).
+A lista conclusa, il totalizzatore può eseguirne una copia su stampante.
+
+3 - Calcolatrice
+
+Si tratta di una routine che consente di impiegare l'elaboratore con la stessa logica di una calcolatrice tascabile.
+La routine, localizzata dalla linea 1300 alla linea 3720, simula il funzionamento di una calcolatrice tascabile con una memoria, doppio registro di lavoro, senza costante e senza eccessive pretese di precisione. A quest'ultimo riguardo sarà senz'altro utile sfruttare la possibilità di convertire il "display" in notazione a virgola fissa, in modo che Mbasic sia costretto ad arrotondare il numero presente sul display, pur continuando ad eseguire i calcoli con il valore numerico originario. Da notare pure la disponibilità dell'operatore "#" che sta per "X parallelo Y". Il numero di parentesi aperte pendenti è presentato a display, come pure la presenza di un dato in memoria ed il modo angolare selezionato.
+Nella scelta delle procedure, mi sono rifatto al caso della Texas TI-59.
+La routine rivela diverse situazioni di errore in cui si può incorrere, inoltre le segnalazioni di errore proprie dell'interprete Mbasic vengono qui disabilitate e presentate sul display, in modo da non mandare in blocco l'esecuzione del programma. In particolare, gli errori propri della routine vengono presentati con un numero superiore a 100. invece i codici di errore Mbasic vengono presentati immutati.
+È altresÌ possibile, tramite le conversioni in binario ed esadecimale, operare con queste due comuni basi alternative alla decimale.
+Nel trattamento delle funzioni trigonometriche, infine, è possibile impostare il calcolo sia in radianti che in gradi sessagesimali o centesimali.
+
+4 - Diagrammi di Bode
+
+È l'ultima delle routine contenute nel programma. Presente dalla linea 3770 alla 6880, è una specie di calcolatrice nel campo complesso che valuta, in un prefissato intervallo di frequenze, i valori assunti in modulo e fase di una espressione algebrica.
+Una volta attivata, la routine richiede l'introduzione della espressione numerica che - tipicamente - descrive una rete RLC di cui si intende studiare l'andamento in modulo e fase della funzione di trasferimento in funzione della frequenza. Tale espressione può fare uso di parentesi, dei normali operatori aritmetici e dell'operatore ''#'' che qui sta per "parallelo tra". I singoli componenti della rete vengono introdotti nella forma: "Xnnnn", in cui "X" indica il tipo di componente (può variare tra R, L o C) ed "nnnn" il suo valore espresso con numero intero, decimale o in notazione esponenziale.
+L'espressione da studiare può essere proseguita su più linee semplicemente inviando un "return" quando si desidera andare a capo (anche nel mezzo di un componente); l'espressione infatti viene considerata terminata solo quando si introduce il carattere "@". Si noti che, data la struttura dell'algoritmo adoperato, qualora occorra introdurre costanti reali o immaginarie, si può fare rispettivamente uso di resistori ed induttori di opportuno valore.
+Introdotta l'espressione, questa volta controllata al fine di verificarne la correttezza formale. La presenza di errori di formato (parentesi non accoppiate, carattere non riconosciuto, dato numerico non riconosciuto ed altri) viene segnalata all'operatore e la routine si predispone per riprendere da capo con l'immissione della espressione.
+Nel caso non siano stati rilevati errori, la routine richiede l'introduzione degli estremi dell'intervallo di frequenze entro cui poi verrà effettuata la scansione (lineare o logaritmica) in ogni punto della quale vengono calcolati modulo e fase.
+Il calcolo numerico, effettuato sui 70 punti della scansione e provvisto di sue proprie (teoricamente inutili) segnalazioni di errore, termina con la presentazione dei valori minimo e massimo riscontrati sia per il modulo che per la fase.
+Si debbono ora introdurre i parametri richiesti per la graficazione dei risultati. Tali parametri (massimo e minimo dell'ordinata nel grafico sia per il modulo che per la fase) possono essere introdotti da tastiera a seconda della zona di grafico che si intende osservare, oppure si può optare di scegliere quelli ottenuti dal calcolo al fine di far occupare alle curve di modulo e fase tutto lo spazio utile nel grafico: ciò viene ottenuto rispondendo con un semplice "return" alle richieste dei valori inferiori di graficazione.
+La routine procede poi con la costruzione del grafico, separando due scale in ordinata per modulo e fase e riportando i valori estremi dell'intervallo delle ascisse. Contemporaneamente, in basso, è presentato anche un sotto-menu in forma compatta: "C/F/G/S/E/M ? :" che indica, rispettivamente per ogni lettera selezionabile, la richiesta per una Copia su stampante del contenuto del video, la presentazione dei valori numerici di modulo e fase per ogni Frequenza discreta interessata dalla scansione, la ripetizione del Grafìco con altri valori per i parametri di graficazione, la ripetizione della Scansione su di un altro intervallo di frequenze, la ripetizione della introduzione di una nuova Espressione, il ritorno al Menu principale.
+La presentazione dei valori numerici puntuali (opzione F) viene effettuata modificando leggermente la videata e facendo apparire - sull'asse delle frequenze - un cursorino, spostabile a destra e a sinistra con i tasti controllo cursore (sinistra per BS e destra per SO), la cui posizione indica a quale ascissa (pure presentata numericamente) sono riferiti i valori di modulo e fase riportati. Il ritorno al sotto-menu av-
+viene con la pressione del tasto "home" (VT).
+La opzione di stampa è piuttosto lunga da eseguire: ciò deriva dal fatto che l'esiguità dello spazio RAM a disposizione non mi ha permesso di implementare una routine più veloce, ma che impegnava un maggior numero di locazioni di memoria.
+
+Note generali
+
+Dato che Mbasic, una volta caricato, mette a disposizione dell'utente 30939 byte e che Elepack.bas occupa, su disco, 30K di memoria, si nota come non ci sia più tanto spazio a disposizione. Questo motiva l'uso estensivo delle variabili intere, il frequente riutilizzo di aree RAM già dimensionate e non più necessarie e la stesura tipicamente non strutturata del programma (esempio la Calcolatrice), pur cercando il più possi-
+bile di conservare una elasticità di implementazione ponendo (es. Diagrammi di Bode) certi parametri utilizzati spesso, sotto forma di variabili definite all'inizio delle rispettive routine.
+La function FNPC$ alla linea 70, è la funzione di spostamento del cursore nella posizione IR %,IC% (riga, colonna) sullo schermo. La variabile LCC alla linea 80 contiene invece l'indirizzo della locazione di memoria entro cui la gestione dello schermo va a cercarsi il carattere da impiegare come cursore, per cui le varie "POKE LCC, nn" non fanno altro che definire il carattere ASCII "nn" come visualizzazione del cursore. 
+La PRINT alla linea 6450 presenta invece il cursorino della opzione F del diagramma di Bode.
+La linea 6560 abilita nella stampante il modo "qualità lettera" e fissa la spaziatura verticale su 6 LPI e quella orizzontale su 10 CPI: i caratteri di controllo impiegati sono quelli riconosciuti dalla Honeywell S11CQ.
+Un vezzo: i vari "max" e "max '84" non fanno altro che rivelare (purtroppo) una volta di più la eccessiva stima che ho di me stesso.
