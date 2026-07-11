@@ -309,34 +309,34 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 3090 IF INSTR("+-", S$(L%)) = 0 THEN GOTO 3160
 3100 IF L% >= NS2% THEN GOTO 3170
 3110 N1# = VAL(S$(L% - 1)) : N2# = VAL(S$(L% + 1)) : NOP% = NOP% - 1
-3120 IF Sf(lX)"-"'-            THEN RIM.N1M+N2tt ELSE RIIiI'"'N1"-N2tt                                                                       
-3130 Sf(LX-1     ).STRf(RI")                                                                                                                 
-3140 NZ"'LX : \olHILE NX(·NS2Z-2                     : S'(NX)"'S'(NX"'2)                  : NX"NX+1          \olENo                          
-3150 NS2X.NS2X-2            : LZ.NS1X-1                                                                                                      
-3160 LZ"LX"'1      : WEHO                                                                                                                    
-3170 XKf·St(NS1X)             : RETURN                                                                                                       
-3180 REH-------          iicce~sor        i ------------------                                                                               
-3'190 XKt"STRf(Ntt)           : Sf(NSX)"'XKf                                                                                                 
-3200 IF NSZ)1 THEN NSX"NS;(+1                                                                                                                
-3210 FLAGX.1 : GOTO 1340                                                                                                                     
-3220 XKf·STR$(Ntt)                                                                                                                           
-3230 SS(NSX).XKt            : GOTO 3210                                                                                                      
-32-40 NERRX-ERR : Sf(1 ).-0-                   : RESUHE 1330                                                                                 
-3250 REH-----       OISEGNO DEL DISPLAY -------------------                                                                                  
-3260 PRIHT CHRf(26):              -.ilX    '84- ;TAB(23);                                                                                    
-3270 PRINT -SIHUlATORE 01 CALCOLATRICE TASCABILE-                                                                                            
-3280 PRINT FNPC' (2.27) ; -,.."'''',. .•••• ''''''''''''''' .••••••••••• '''''''''''''.-                                                     
-3290 FOR KX.1 TO 3:PRINT                   TAB(28),""-;TAB(53):-M":NEXT                          K:iC                                        
-3300 PRINT TAB(28) : " ••••••                "'== •••• ,.,."'."''''' •••••••••• ''''-                                                        
-3310 PRINT : PRINT                                                                                                                           
-3320 PRINT - +--------------------                         .•.---------------------------                                        H :         
-3330 PRINT ------------+--------+-                                                                                                           
-3340 PRINT ":       ("'10 .... )(          )""e)(p                                                                    N"'n!                  
-3350 PRIHT               I=int          l P""3.14        1-                                                                                  
-3360 PRIHT                                                                                                     +-------- _:                  
-3370 PRINT ---------- -- +---- ----+-                                                                                                        
-3380 PRINT - ILG-109                     LN""ln             :     V.)( ....
-                                                                         2           M"" Ix:                        H"''''11 .•.             
+3120 IF S$(L%) = "+" THEN RI# = N1# + N2# ELSE RI# = N1# - N2#
+3130 S$(L% - 1) = STR$(RI#)
+3140 N% = L% : WHILE N% <= NS2% - 2 : S$(N%) = S$(N% + 2) : N% = N% + 1 : WEND
+3150 NS2% = NS2% - 2 : L% = NS1% - 1
+3160 L% = L% + 1 : WEND
+3170 XK$ = S$(NS1%) : RETURN
+3180 REM------- accessori ------------------
+3190 XK$ = STR$(N#) : S$(NS%) = XK$
+3200 IF NS% > 1 THEN NS% = NS% + 1
+3210 FLAG% = 1 : GOTO 1340
+3220 XK$ = STR$(N#)
+3230 S$(NS%) = XK$ : GOTO 3210
+3240 NERR% = ERR : S$(1) = "0" : RESUME 1330
+3250 REM----- DISEGNO DEL DISPLAY -------------------
+3260 PRINT CHR$(26); "max '84"; TAB(23);
+3270 PRINT "SIMULATORE DI CALCOLATRICE TASCABILE"
+3280 PRINT FNPC$(2, 27); "=========================="
+3290 FOR K% = 1 TO 3 : PRINT TAB(28); "#"; TAB(53); "#" : NEXT K%
+3300 PRINT TAB(28); "=========================="
+3310 PRINT : PRINT
+3320 PRINT "+-----------------------+--------------------------------------";
+3330 PRINT "------------+----------+";
+3340 PRINT "|  <=10^x      >=exp    |  ^= x^2     Y=y^x    \=1/x     N=n!";
+3350 PRINT "     I=int  |  P=3.14  |"
+3360 PRINT "|                       |                             +--------";
+3370 PRINT "------------+----------+";
+3380 PRINT "|LG=1og      LN=ln      |  V=x^2      m=|x|    S=+\-  | M+=M + ";
+
                                                                                                                                              
 3390 PRINT -           H*"'H *           HI.H      in :-                                                                                     
 3400 PRINT     -.•.------ --------------+------------                                -------- ----- -- .•.                                   
