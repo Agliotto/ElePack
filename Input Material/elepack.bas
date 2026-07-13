@@ -336,116 +336,116 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 3360 PRINT "|                       |                             +--------";
 3370 PRINT "------------+----------+";
 3380 PRINT "|LG=1og      LN=ln      |  V=x^2      m=|x|    S=+\-  | M+=M + ";
-
-                                                                                                                                             
-3390 PRINT -           H*"'H *           HI.H      in :-                                                                                     
-3400 PRINT     -.•.------ --------------+------------                                -------- ----- -- .•.                                   
-3410 PRINT                                                                                                                                   
-3420 PRINT -:H)('"'he)«)d                Bx"bin(x):               s=sin                             t=tan           H-"'H                    
-3430 PRINT             H/.H      1       HR"'H rec 1-                                                                                        
-3440 PRINT                                                                                                                                   
-3450 PRINT -        .•.--------+--------+"                                                                                                   
-3460 PRINT -: OH"'d"h                    OB""d"b                                                 iit=iitiin:        HX"H":<                  
-3470 PRINT           l ""xlly           : u".enu·        1-                                                                                  
-3480 PRINT -+--------------------                          .•------------------------                          .•.               -;          
-3490 PRIHT .--+--------+--------+-                                                                                                           
-3500 PRINT "ICI-CI             In        CA""CI ali:              d"'OEG                            g"'GRA : f)(:cFIX( -;                    
-3:510 PRINT -x)          e""EE                                                                                                               
-3520 PRINT "+--------------------+---------------------------                                                  .•.---------        ;         
-3530 PRINT ---------------------                        .•.-                                                                                 
-3540 PRINT:PRINT           -( funzion          i In Minuscolo"                   precedute       dii A )"                                    
-3550 REH-----       SCRIVI NEL DISPLAY --------------------                                                                                  
-3:560 PRINT FNPCfC4,29):                 : IF EEX.-'1 ANO NoX"15 THEN GOTO 3620                                                              
-3570 XK••••VAUXK.)           : IF EEX"1 THEN GOTO 3600                                                                                       
-3:580 PRINT SPC(22) ;FNPC'(4.29);                                                                                                            
-3590 PRINT USING STRING'(21-NOX.-"-)+".-+STRINGt(NOX."tt"):XKM                                                        GOTO 3630              
-3600 PRIHT SPC(22) :FNPCf(4,29):                                                                                                             
-3610 PRINT USING • ••••• ·+STRINGf(NDX.·                          ••·)+· .••M· ••••-;XK •• : GOTO 3630                                       
-3620 DKS·RIGHTf(SPACEf(21)+XKS,22)                              : PRINT USING -,                                                     ,- ;OK" 
-3630 PRINT FNPC$(4.1) :MANG'                                                                                                                 
-36~O IF HEH".O THEN HEHFs"'-                                                                                                                 
-36:50 PRINT FNPCS(4.7>;HEHF'                                                                                                                 
-3660 IF NPAX)O THEN NPAF$"'STR'(NPAX)+-par-                                    ELSE NPAF.--                                                  
-3670 IF HoX·15 THEN FXF'''-                       "ELSE           FXFf.-r      l x-                                                          
-3680 PRINT FNPCf(4.20)                ;fXF$                                                                                                  
-3690 PRINT fNPCt(4,12)                :NPAf$                                                                                                 
-3700 IF NERRX.O THEN ERff.-                                                                                                                  
-3710 PRINT FNPC'(-4.60)               fERFS                                                                                                  
-3720 RETURN                                                                                                                                  
-3750 REH              revisione         nov.      1982 - rlconv.             Hbaslc        nov.   19B4
-3760 REH--------------            ---------------           -----      -------------------------
-3770 HAXOPX''100 : HAXCX'"'4 : HAXRZ.21 : HAXITEX=7o,
-3780 olH CATt(HAXCX). V1t(HAXOPZ) .V2t(hAXOPX),                              WREM(HAXOPX)• \olIM" (HAXOPX)
-3790 DIH Kf(HAXOPX) ,l''IOL''UtAXITEZ) ,FASE" (l''IAXITEZ) .FREQlt<HAXITEX)
-3800 CAT' (D)"'"""      :CATf( 1 )",-.-       :CATt(2)"'-      I· :CATt( 3)"-"'-           :CAT' (lo ) ••--.
-3810 PINZ=4 : PFINX"P INZ"'HAX I TEX+1
-3820 RIGA1f"'STRING'(9.---)"'-:-                   : RIGA2$=SPACEf(9)"'-:-                    : fOR K%=1 TO 3
-3830 RIGA1f=RIGA1 •.•.RIGA1f              : RIGA2'=RIGA2f"'RIGA2t                    : NEXT KX
-3B40 IUGA1'zLEfTf(RIGA1f.PFINX-PIN;(-1)                          : RIGA2f"LEFTf(RIGA2                •• PFINZ-PINZ-1)
-3850 PRINT CHRt(26);-lIlax              '84-:TAB(25);-CAlCOLO                   DI DIAGRAMMI DI SOoE- : PRINT
-3B60 PRINT:PRINT
-3870 REI"I------      INGRESSO. HEHORIZZAZIONE E CORREZIONE ESPRESSIONE -----
-3880 N.OPX=O:FLAGX.O             : ATt.--
-3890 PRINT "----          Introduc      i l ·esp,..-ess Ione ii l gebr I Cii terMI nando con é)-
-3900 POKE LCC.13 : LINE INPUT -EXPR :? -:A'
-3910 If Af.--       THEN PRINT CHRf(11);:GOTO                      3900
-3920 lX"LEN(A$)         : AT'=ATt+A'
-3930 FOR KZ"'1 lO LX
-3940 Ct""HIO'(A'.KX.1)
-3950 CX.ASC(C') :N.OPX"'N.OP;(+'l
-3960 IF FlAGX"O THEN GOTO 1,020
-3970 FlAGX"'O
-3980 IF CX)"'4B ANO C%("'57 THEN GOTO 4000
-3990 IF LEFTt(Af.1)()-E-                THEN GOTO -4020
-1,000 KX=KX-1-LEN(BUf'Ff):             BUF"F."'BUFF•.•.A.
-4010 N.OPX=N.OPX-1 :GOTO 4100
-4020 FOR I X=O TO HAXCZ
--4030 IF Cf( )CATf (IX)          THEN GOTO 4060
-4040 V1'(N.OPX).Cf
-4050 GOTO -4270
-4060 HEXT n
-4070 IF CZ"'40 OR CX"41 THEN VH(N.OPX)=C":GOTO                                   4270
-4080 IF CX( )82 ANO CX( )76 ANO C%:()67 THEN GOTO 42.1,0
-.1,090 V1f (N. OPX) ""Cf: 8UFFf"'R IGHTt (A$. LX-KX)
-4100 V2'(N.OP:O.STRf(VAU8UFF'»
-4110 IF V2f(N.OPX)"--             THEN PRINT "Il!              erro,..-e     In un dato-:GOTO              3880
-4120 L 1 X.LEN (8UFFt)
-4'130 FOR J%=1 TO U%
-4140 KX"KX"'1
-4150 CX-ASCCHIOS(BUFF' • .JX.1»
-4160 IF C%=32 THEN GOTO 4220
-4170 IF CZ)=48 ANO C%("'57 THEN GOTa 4220
-4180 IF C;(=69 OR CX=.I,6 OR CZ""4.1, THEN GOTO 4220
-4190 IF HIOf( BUfF$, JX":1, '1) ( ) -E- THEN GOTO 3940
-4200 IF CZz43 OR C;("'45 fHEN GOTO 4220
-4210 PRINT -l!!         erl"ore     '115-:GOTO 3880
-4220 NEXT JZ
-4230 FlAGZ"1: GOTO 3900
-.1,240 IF Cf"'-"-     THEN GOTO 4290
-.1,250 IF Ct"'·    - THEN GOTO 4270
-.1,260 PRINT -l'I      errore       iil Ciiriittere       ";C$:GOTO 3880
-4270 NEXT KX
+3390 PRINT "   M*=M *    MI=M  ln   |"
+3400 PRINT "+------------------------+----------------------------+        ";
+3410 PRINT "                        |"
+3420 PRINT "|Hx=hex(x)   Bx=bin(x)|    s=sin      c=cos    t=tan  | M-=M - ";
+3430 PRINT "   M/=M /    MR=M rec   |"
+3440 PRINT "|                       |                             |        ";
+3450 PRINT "  +---------+----------+"
+3460 PRINT "|DH=d~h      DB=d~b     | as=asin    ac=acos  at=atan | HX=M~x ";
+3470 PRINT "  | #=x//   | u=menu'   |"
+3480 PRINT "+-----------------------+-----------------------------+--------";
+3490 PRINT "--+---------+----------+"
+3500 PRINT "|CI=Cl in    CA=Cl all  |  d=DEG      r=RAD    g=GRA  | fx=FIX(";
+3510 PRINT "x)  e=EE              |"
+3520 PRINT "+----------------------+------------------------------+--------";
+3530 PRINT "----------------------+"
+3540 PRINT:PRINT "( funzioni in minuscolo = precedute da A )"
+3550 REM----- SCRIVI NEL DISPLAY --------------------
+3560 PRINT FNPC$(4, 29); : IF EE% = -1 AND ND% = 15 THEN GOTO 3620
+3570 XK# = VAL(XK$) : IF EE% = 1 THEN GOTO 3600
+3580 PRINT SPC(22); FNPC$(4, 29);
+3590 PRINT USING STRING$(21-ND%, "#") + "." + STRING$(ND%, "#"); XK# : GOTO 3630
+3600 PRINT SPC(22); FNPC$(4, 29);
+3610 PRINT USING "##." + STRING$(ND%, "#") + "^^^^"; XK# : GOTO 3630
+3620 DK$ = RIGHT$(SPACE$(21) + XK$, 22) : PRINT USING "\                    \"; DK$
+3630 PRINT FNPC$(4, 1); MANG$
+364O IF MEM# = 0 THEN MEMF$ = "    " ELSE MEMF$ = "mem"
+3650 PRINT FNPC$(4, 7); MEMF$
+3660 IF NPA% > 0 THEN NPAF$ = STR$(NPA%) + "par" ELSE NPAF$ = "     "
+3670 IF ND% = 15 THEN FXF$ = "    " ELSE FXF$ ="fix"
+3680 PRINT FNPC$(4, 20); FXF$
+3690 PRINT FNPC$(4, 12); NPAF$
+3700 IF NERR% = 0 THEN ERF$ = "          " ELSE ERF$ = "errore" + STR$(NERR%)
+3710 PRINT FNPC$(4, 60); ERF$
+3720 RETURN
+3730 REM----------------------------------------------------------------
+3740 REM     CALCOLO DI DIAGRAMMI DI BODE DA RETI RLC
+3750 REM     revisione nov. 1982 - riconv. Mbasic nov. 1984
+3760 REM----------------------------------------------------------------
+3770 MAXOP% = 100 : MAXC% = 4 : MAXR% = 21 : MAXITE% = 70
+3780 DIM CAT$(MAXC%), V1$(MAXOP%), V2$(MAXOP%), WRE#(MAXOP%), WIM#(MAXOP%)
+3790 DIM K$(MAXOP%), MDL#(MAXITE%), FASE#(MAXITE%), FREQ#(MAXITE%)
+3800 CAT$(0) = "#" : CAT$(1) = "*" : CAT$(2) = "/" : CAT$(3) = "+" : CAT$(4) = "-"
+3810 PIN% = 4 : PFIN% = PIN% + MAXITE% + 1
+3820 RIGA1$ = STRING$(9, "-") + ":" : RIGA2$ = SPACE$(9) + ":" : FOR K% = 1 TO 3
+3830 RIGA1$ = RIGA1$ + RIGA1$ : RIGA2$ = RIGA2$ + RIGA2$ : NEXT K%
+3840 RIGA1$ = LEFT$(RIGA1$, PFIN% - PIN% - 1) : RIGA2$ = LEFT$(RIGA2$, PFIN% - PIN% - 1)
+3850 PRINT CHR$(26); "max '84"; TAB(25); "CALCOLO DI DIAGRAMMI DI BODE" : PRINT
+3B60 PRINT : PRINT
+3870 REM------ INGRESSO, MEMORIZZAZIONE E CORREZIONE ESPRESSIONE -----
+3880 N.OP% = 0 : FLAG% = 0 : AT$ = ""
+3890 PRINT "---- Introduci l'espressione algebrica terminando con @"
+3900 POKE LCC, 13 : LINE INPUT "EXPR :? "; A$
+3910 IF A$ = "" THEN PRINT CHR$(11); : GOTO 3900
+3920 L% = LEN(A$) : AT$ = AT$ + A$
+3930 FOR K% = 1 TO L%
+3940 C$ = MID$(A$, K%, 1)
+3950 C% = ASC(C$) : N.OP% = N.OP% + 1
+3960 IF FLAG% = 0 THEN GOTO 4020
+3970 FLAG% = 0
+3980 IF C% >= 48 AND C% <= 57 THEN GOTO 4000
+3990 IF LEFT$(A$, 1) <> "E" THEN GOTO 4020
+4000 K% = K% - 1 - LEN(BUFF$) : BUFF$ = BUFF$ + A$
+4010 N.OP% = N.OP% - 1 : GOTO 4100
+4020 FOR I% = 0 TO MAXC%
+4030 IF C$ <> CAT$(I%) THEN GOTO 4060
+4040 V1$(N.OP%) = C$
+4050 GOTO 4270
+4060 NEXT I%
+4070 IF C% = 40 OR C% = 41 THEN V1$(N.OP%) = C$ : GOTO 4270
+4080 IF C% <> 82 AND C% <> 76 AND C% <> 67 THEN GOTO 4240
+4090 V1$(N.OP%) = C$ : BUFF$ = RIGHT$(A$, L% - K%)
+4100 V2$(N.OP%) = STR$(VAL(BUFF$))
+4110 IF V2$(N.OP%) = "" THEN PRINT "!!!   errore in un dato" : GOTO 3880
+4120 L1% = LEN(BUFF$)
+4130 FOR J% = 1 TO L1%
+4140 K% = K% + 1
+4150 C$ = ASC(MID$(BUFF$, J%, 1))
+4160 IF C% = 32 THEN GOTO 4220
+4170 IF C% >= 48 AND C% <= 57 THEN GOTO 4220
+4180 IF C% = 69 OR C% = 46 OR C% = 44 THEN GOTO 4220
+4190 IF MID$(BUFF$, J% - 1, 1) <> "E" THEN GOTO 3940
+4200 IF C% = 43 OR C% = 45 THEN GOTO 4220
+4210 PRINT "!!! errore  115" : GOTO 3880
+4220 NEXT J%
+4230 FLAG% = 1 : GOTO 3900
+4240 IF C$ = "@" THEN GOTO 4290
+4250 IF C$ = " " THEN GOTO 4270
+4260 PRINT "!!! errore al carattere "; C$ : GOTO 3880
+4270 NEXT K%
 4280 GOTO 3900
-4290 N.OPic:"'N.OPZ-1
-4300 IF N.OPZ""1 THEN GOTO 1,600
-4310 FOR JZ.1       TO N.OPZ-1
-4320 C1Z"ASC(VH(J;(»
-4330 C2;(-ASC<V1t(JX+'1»
-4340 FOR AX=O TO f"iAXC%
-4350 IF C1X=ASC(CATS(AX»                  THEN G010 -4380
-4360 NEXT AZ
-4370 IF C1X()40         THEN GOTO 4400
-4380 IF C2;("'82 OR C2X"'76 OR C2X"'67 OR C2X"'40 THEN GOTa -4520
--4390 PRINT "I I l errore           111- :GOTO 3880
-.1,400 IF C'IX( )41 THEN GOTO 4-460
-1,.1,10 If C2Z"41 THEN GOTO .1,520
-4420 FOR AZ=O TO HAXCZ
-4430 IF C2;("'ASC(CAH(AX»                 THEN GOTO 4520
-4-440 NEXT AZ
-4450 PRINT -!! t e,..-rore 112- :GOTO 3880
-4460 IF C1;I:( )82 ANO C1Z( )76 ANO C'l;( )67 THEN PRINT -! l l errore                                       113" :GOTO 3880
-4470 IF C2%"4'1 THEN GOTO 4:520
-1,480 FOR AX=O TO HAXCX
+4290 N.OP% = N.OP% - 1
+4300 IF N.OP% = 1 THEN GOTO 4600
+4310 FOR J% = 1 TO N.OP% - 1
+4320 C1$ = ASC(V1$(J%))
+4330 C2$ = ASC(V1$(J% + 1))
+4340 FOR A% = O TO MAXC%
+4350 IF C1% = ASC(CAT$(A%)) THEN G010 4380
+4360 NEXT A%
+4370 IF C1% <> 40 THEN GOTO 4400
+4380 IF C2% = 82 OR C2% = 76 OR C2% = 67 OR C2% = 40 THEN GOTO 4520
+4390 PRINT "!!! errore   111" : GOTO 3880
+4400 IF C1% <> 41 THEN GOTO 4460
+4410 IF C2% = 41 THEN GOTO 4520
+4420 FOR A% = 0 TO MAXC%
+4430 IF C2% = ASC(CAT$(A%)) THEN GOTO 4520
+4440 NEXT A%
+4450 PRINT "!!! errore 112" : GOTO 3880
+4460 IF C1% <> 82 AND C1% <> 76 AND C1% <> 67 THEN PRINT "!!! errore 113" : GOTO 3880
+4470 IF C2% = 41 THEN GOTO 4520
+4480 FOR AX=O TO HAXCX
 4490 IF C2X=ASC(CATS(AX»                  THEN GOTO .1,520
 4500 NEXT A%
 4510 PRINT -!!!         errore      114- :GOlO 3880
