@@ -448,148 +448,243 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 4480 FOR AX=O TO HAXCX
 4490 IF C2X=ASC(CATS(AX»                  THEN GOTO .1,520
 4500 NEXT A%
-4510 PRINT -!!!         errore      114- :GOlO 3880
-4520 NEXT JX
-.1,530 NPAZ.O:NPCX"O
-4540 FaR NX"'1 TO N.OPi::
-4550 IF V1"(NiO·"C-             THEN NPAZ=NPA;("'1
-4560 IF V'1$(NX).-)-            THEN NPCX=NPCX+1
-4570 NEXT HX
-4580 IF NPAZ"'NPCZ THEN GOTO 4600
-4590 PRINT -!'! errore              per piirentesl          non accopptiite-:GOTO                  3880
-.1,600 PRIHT
-.1,610 PRÙn TA8(22);W»)                ESPRESSIONE ALGEBRICA CORRETTA «(-
-4620 PRINT:PRtNT          -----     Int,..-oduCI      i p ••,..-
-                                                               ••• etrl      pe,..- l •• scan.,one·
-.1,630 POKE LCC,13 : INPUT -FREQUEHZA 01 INIZIO                                (Hz)      :-:FI"
-4640 IF FIM(O THEN PRINT CHRf(11);CHRf(24)::GOTO                                     -4630
-4650 INPUT -Fk':GUENZA FINALE                        (Hz)    :";FFM
-4660 IF FF"("fHt         THEN PRINT CHR$(11);CHR'(24):CHIU(11);CHRf(24),:GOTO                                        4630
-4670 INPUT -ASCISSA LIN/LOG                                  :·;ASf
-4680 IF AS''''-UN-          THEN ASt.-lin-            : STEPfM""(FF"-FI")/(HAXITEX-1):GOTO                          4760
-4690 IF ASf()-LOG-            THEN PRINT CHRf(11):CHR'(241;:GOTO                              4670
-4700 ASt"-lo9-        : S""O : K10"·lOG(10")
-4710 FOR KX"'1 TO HAXITEX
-4720 S••• S••.•.lOG(KX)IK10       ••
-4730 NEXT KX
-47.1,0 K1""'(FF"-FIN)/SH
-4750 REH------        SCANSIONE IN FREQUENZA DELLA ESPRESSIONE COHPLESSA -----
--4760 PRINT:PRINT         -         C••lcolo       del":HAXITEX;-\liilori                  dellii  .Ciinslone-:PRINT
-4770 F ••• n •• : POKE LCC.32 : ERNZ=O
-4780 K3"-8.6858896381M
-4790 K4••••114. 5915590262M
-4800 POKE LCC.32
-4810 faR NFX.1 TO HAXITEX
-4820 PRINT CHRf(11):CHRt(2.1,):-PASSO                     N.-,NFi::
--4830 OH"·2".Ftt.PGM
-4840 FOR AZ"'1 TO N. OPX
--4850 Kf (AZ) "'V1$ (AX)
-4860 V".VAL (V2f (AX) )
-4B70 OP$=K$(AX)
-4880 If OP$"'-R- THEN WREtt(AX)'"'Vtt:WIMtl(AX)=o:GOTO                               4910
-4890 IF OP'=-C-         THEN IolRE"(AX)=0:WIH"(AX)'"'-1H/V"/OH":GOTO                              4910
-4900 IF OP$"'-L - THEN WREtt(Aic:)"O:IolIH"(AX)""V".OHtt
-4910 NEXT AX
-1,920 IF N.OPic:.'l THEN K'(1).-E":RR;("'1:GOTO                        5460
-4930 FOR ILX=N.OPX TO D STEP -'1
- 4940 IPX.ILX"'1
- 4950 If   Kf<ILX).-(       - THEN GOTO 4970
-4960 NEXT ILX
-(umtinllCl CIpCl~jn(l UUU
-MCmicrocomputer                          n. 44 - settembre 1985                                                                                                                                                                                                         187
-   5020 lF C.-~)                 fHEN G010 5060                                                                                5980 IF K:t/5"'INT(Kr.IS)        THEN RIGA."'RIGAU               ElSE RIGA''''RIGA2.
-   5030 IF C.< )CAU(JX)                       THE.N G010 ~U50                                                                  ~990 PRINT FNPC$(Kit:.INr.) ;RIGA$ : NEXT KX
-   501,0 GOSUO5090                                                                                                             6000 PRINT FNPC'(2.0);"MOD.·               : PRINT FNPC'(3.0);H(dB)-
-   5050 NEXT KKZ                                                                                                               60"10 PAINT FNPC.(2.PFINit:+l);"FASE"                 : PRINT FNPC$(3.PFlNl(+I):                    '(g"-)-
-   5060 NEXl .lX                                                                                                               6020 FOR IR';"'O TO MAXRZ-1 STEP 5
-   5070 K.< lPX-l)='                    :K.(KZ)z                                                                               6030 OATOH"=M2"-IRXIISTEPM"
-   5080 IF IPZ=1 THEN GOTO 5410 ElSE G010 4930                                                                                 6040 IF ABS<OATOM")( 10 THEN FORM.=-N ••••• - ELSE FORH."'-" ••••M~
-   5090 FOR LZ=KlI;.-l 10 1 5JEP -1                                                                                            6050 PRINT FNPC.(lRX.OhUSING                FORH.:DATOH"
-   51lJ0 PU:"'L:l:VX=ASC<K.(LX)                                                                                                6060 oA1PHM"'PH2"-IRr.IISIEPPH"
-   5110 IF VX=82 OR VlI;.=76 OR VZ""67 OR V:l=61 rHEN GOTO 5140                                                                6070 IF ABS(OATPH")( 10 THEN FOR'U=~HH."~                        ELSE FORH.""-IU •••••-
-   51,."!0 NEXT LlI;.                                                                                                          6080 PRINT FNPC.( IAX.MAXITEr.+PINX+2)                 :USING FORH.,OATPH"
-   5130 PRINl            • t t e,.-,.-ore         121 :STOP                                                                    6090 NEXT IRi::
-   5140 FOR lZ=K7.+1 IO N.OPZ                                                                                                  6100 PRINT FNPC'(HAXRi::+1.0) ;USING "1t••••• It" ••·,.                   ":FREQ ••( 1):
-   5150 SL"*'L7.:VZ=ASC(K'(l"»)                                                                                                61-10 PRINT - Hz",TAO(MAXITEit:-l):
-   5160 lF VX=82 OR VX=76 OR VZ=67 OR VZ""61 l'HE:.NG010 5190                                                                  6120 PRINT USING - •••••••••••••.v····.. -;FREQ ••(MAXITEr.);
-   5170 NEXT L"                                                                                                                6130 PRINT FNPC$(MAXRX+l,MAXlTEX+6),~                     H=~
-   5180 PRIN! ~It.                 en-orE'        1..'2- :S10P                                                                 6140 PRINT FNPC.(HAXRX.PINX+9) ;AS$
-   5190 AM=IoIREIHPL:t):OH=WIMIl(PL:l)                                                                                         6150 FOR K7.""l TO l'1AXITEX
-   5200 CH"'WRE.l(SL:t) :O""'1oI1M.HSLX)                                                                                       6160 HX"'MAXR;(-INT< (MOL"(Kit:)-H1")/STEPMM)--1
-   5210 ON NJZ GOTO 5.220.5270.5300.5330.536U                                                                                  6170 IF HX)MAXRX-l THEN IRr.=HAXRZ-1 : C$"'~v-                              GOTO 6190
-   5220 PARZM=( (AMIICM-9M"OM)" <AM+c••) •.(AlhIOM' OHIICH)* (O,hOM) )                                                         6180 Ho HX(O lHEN IR;(=O : C.=~·'"               ELSE IRiC"'Hi::            C'=-IlI-
-   5230 WREM       (KZ) "'PARIMI            ({ A.'" CM)* (AM+CM)+ (OM+OM)Il (8 ••+0M»)                                         6190 PRINT FNPC'(lR7..Kr.+PINX):Ct
-   5240 PARZM=( (AMlIoM" HM*LH) Il (AM+CM)- (A"*CM-8M*0,,) * (OH" oM) )                                                        6200 P;.::
-                                                                                                                                        .••HAXR%-INI'«FASEH(K:U           PHI")/STl..PPHH)            I
-   5250 WIM" (Kì: )"'PARZMI « AM--CM)Il (AM+CM). (~ ••+oM) Il (8M +0"»                                                         6210 lF PZ'HAXRi::-l         T'HEN HO. M"Ak,.          •••.•             , uvlO 6230
-   5260 GOTO 5380                                                                                                              6220 IF P7.(O rHEN IR;(zO : C$""-"-              ELSE IRi::"'P;( : c'.-r~
-   5.270 WREM(KZ)"AM"CH-O".Otl                                                                                                 6230 IF MX=Pi:: ANO HX)=O ANO Hi::(HAXR:l THEN IR:l:a:Hl( : C.= x·
-   5280 IHH"(KX)""AM.O,,·OMIICM                                                                                                6240 PRINT FNPC$( IRX.KX+PINX) ,c.
-   5290 GOI O 5380                                                                                                             62S0 N XT KX
-   ~300 IolREM     (KX)     '" (AM"CM+O"110" ) / (C"IIC"+O"IIO"                  )                                             6260 PRINT FNPC.(HAXRX .PF1NZ+ 1); ~ max-
-   ~310 l.'I H" ( KZ )"'1 8"IIC"· A!fIlO") I (C".C.HoMIIo,,)                                                                   6270 POKE LCC.13 : PRINT FNPC.(HAXRX+1.32);-C/F/G/S/E/M                                       ? •
-   ~320 GOTO 5380                                                                                                              6280 R''''INPUH(l)          : IF INSTR(·CFGSEH·,R$)=O                 HiEN GOTO 6280
-   ~330 WRE"(KZ)=A"'Cn                                                                                                         6290 IF R,,,,"CH THEN GOTO 6560
-   531,0 l.'IMM(KZ)=O"'UM                                                                                                      6300 IF R.="FH        THEN GOTO 63BO ELSE PRINl CHR.(26)
-   5350 LJO    f O 5380                                                                                                        63-10 IF Rt"'~E~ THEN GOTO 3850
-   5360 WRlMtKZ)=A"                  C"                                                                                        6320 IF Rt=-S~        THEN PRINT -ripetizIOne                dlrll~      scanslonlr~:OPZX"'1:GOTO               6350
-   5370 IolIM"(KX'=OM-OIt                                                                                                      6330 IF R.=·~GH THEH PRIHT ~rlplrt              IZlone       del    gr~rlco-:OPZl(""2:GOTO                6350
-   ~,380 K.IK);)=           '"                                                                                                 6340 ERASE CATt.V1t.V2$.IolRE".loIIH".K              •• MoLM,FASE".FREQ"                 : GOTO 90
-   5390 K.(PLX)-                   :t<.(SL7.):-                                                                                6350 PRINT:PRINT          ~EXPR • H:LEF"T.(AT'.LEN(AH)-l)                     :PRINT:PRINT
-   5400 RE.1URN                                                                                                                6360 ON OPZX GOTO 4620.5680
-   5 ••10 FOR KX=I IO N.OP%                                                                                                    6370 REH-------         PHESENTAZIONE DATI PUNTUALI ------------------
-   51,20 RR7.z;K%                                                                                                              6380 'POKE LCC.32:PCr.=PINX·tl         :PCVX"'PCX:PRINT FNPC'(HAXR%+1.0) ,CHR$(24):
-   ~t,30 lF K.(KZ) ••..·"                 THEN GOro 5460                                                                       6390 GOTO 6440
-   5440 NEXI K%                                                                                                                6400 PCVit:=PC" : R.""INPUr.(1)            : R"""ASC<R.)
-   5t,50PRIN           "tlt        e,.-,.-ol'"E' 123 :STOP                                                                     6410 IF Rr.""11 THEN GOTO 6500
-   5460 HE."21WREW(RR7.)                                                                                                       6420 IF RX:8 lHEH PC:t""PCVX-1 : IF PCX(PINr.+l                          THEN PCr..PFINr.-l
-   ::'4/0 IM••.• ::IolIri••(RR7.)                                                                                              6430 IF R;("'14 THEN PCX.PCVl(+l            : IF PCl()PFINl(-'l             THEN PCl(zPINX" I
-   51,80 MOL" l NF7.)"'K3"lIl0L(                 !:>QR (RE.""R~M'-IMlhIM"»)                                                    6440 PRINT FNPC. (HAXRX. PCVX) ; - -~ ; FNPC. (HAXRX. PINX+9) ; AS.
-   ::'490 rASE."(NF:l)>::Kt,"IIAI~1                lMM/REtO                                                                    6450 PRINT FNPC$(HAXRX. PCX) ; CHR. (31 ) ,CHRt (7)
-   '5500 ~l(lJ ••tNF7.)"'F"                                                                                                    6460 PRINT FHPCt(HAXRit:+·1.4),-r,.-eq             "'-:USIHG        - ••••••• MM"M••'·.•.•.•. ··~:FREQ'HPCX-PIN7.)
-   5~.10 1F AS.'" l tn                  rHEN F"=FH+SIEP~ •• E.LSE:F"=FM+-KUIILOG(NFr.+I)/K10tt                                 6470 PRIfliT FHPC.(HAXRX+l.32);"",od               ·-;USING         - ••••••••••••••••••..
-                                                                                                                                                                                                                       M· •.•-'HoL    ••(PCr.-PIN:l)
-   'J~2U NEX'I NFi;                                                                                                            6'.80 PRINT FNPC$(HAXRX+l.57);-rasE'                 =",USING         • ••••• tH.NM••••" •..•..•..
-                                                                                                                                                                                                                                -;FASE ••(PC7.-PINl()
-   5~30 PHIN1:POKE. lLL.13                                                                                                     6490 GOTO 6400
-   ::'540 REM- ----              INGRESSO PARAMETRi PU~ LA COS1HULIONE DEL GRAFICO                                    ----     6500 PRINT FNPC. (MAXRr.. PCX) ; - - - : FNPC. (HAXRil:, PINX+9) ; ASt
-   5550 MI""'10~38:HS"=                      10'-38                                                                            65'10 PRINT FNPC. (HAXRX+1 • O) : CHR. (24) ; USING ~NH••• M••••·.•.                 M ••••-;   FREli" ( 1) ;
-   'J~60 l'OR KX"'1            IO MAXIIE:;(                                                                                    6520 PRlHT - Hz~;TAB(HAXITE:t);
-   ~~70 TOTKM=MOL"(K %)                                                                                                        6530 PRIHT USING ~H••••••••••••..•••••••.. ~:FREQ••(HAXITEX):
-   5~80    H     101K"         -   "    THEfII   MIM     lolKM                                                                 6540 PRINT FHPC.(HAXRX+l.HAXITEr.+6):-                    Hz- : GOTO 6270
-   5590    H     10lKH)I"I~"             IHlN I"IS••"'IOTK"                                                                    65:50 REH-------        STAHPA DEL GRAFICO ---------------------------
-    5600   NEXl Kr.                                                                                                            6560 LPRINT : LPRIHT CHRt(27):~[1·)~;CHR.(27);70~;CHR.(27>:~73~
-    5610   PHIM"10--38:PHS"""-1D.-38                                                                                           6570 LPRINT : LPRINT : LPRIHT
-   ::'620  FOR 1<'%"'1lO MAXI 'Li:                                                                                             6580 lPR INT TA8 (15); ~RAPPRESENTAZIONE IN MODULOE FASE DELLA RETE
-    ~6jO    l'OTKMs:FASE:."         (Kr.)                                                                                      6590 LPRINT : lPRINT lEFU(ATt.LEN(ATt)-·I)                          : LPRINT
-   564()    IF -IO-TK"<PHI•• rHEN PHI"=10IKU                                                                                   6600 POKE LCC.32 : PRINT FNPC$(HAXRX+l,32);SPACE.(15)
-    56~U    lf   rOH")PHSM                THEN PHS""'IOTK"                                                                     6610 FOR RX=O TO HAXR7.-1 : F.RX/5                 : STt,.--
+4510 PRINT "!!! errore 114" : GOTO 3880
+4520 NEXT J%
+4530 NPA% = 0 : NPC% = 0
+4540 FOR N% = 1 TO N.OP%
+4550 IF V1$(N%) = "(" THEN NPA% = NPA% + 1
+4560 IF V1$(N%) = ")" THEN NPC% = NPC% + 1
+4570 NEXT N%
+4580 IF NPA% = NPC% THEN GOTO 4600
+4590 PRINT "!!! errore per parentesi non accoppiate" : GOTO 3880
+4600 PRINT
+4610 PRINT TAB(22); ">>> ESPRESSIONE ALGEBRICA CORRETTA <<<"
+4620 PRINT : PRINT "---- Introduci i parametri per la scansione"
+4630 POKE LCC, 13 : INPUT "FREQUENZA DI INIZIO (Hz) :"; FI#
+4640 IF FI# < 0 THEN PRINT CHR$(11); CHR$(24); : GOTO 4630
+4650 INPUT "FREQUENZA FINALE (Hz) :"; FF#
+4660 IF FF# <= FI# THEN PRINT CHR$(11); CHR$(24); CHR$(11); CHR$(24); : GOTO 4630
+4670 INPUT "ASCISSA LIN/LOG          :" ; AS$
+4680 IF AS$ = "LIN" THEN AS$ = "lin" : STEPF# = (FF# - FI#) / (MAXITE% - 1) : GOTO 4760
+4690 IF AS$ <> "LOG" THEN PRINT CHR$(11) : CHR$(24); : GOTO 4670
+4700 AS$ = "log" : S# = O : K10# = LOG(10#)
+4710 FOR K% = 1 TO MAXITE%
+4720 S# = S# + LOG(K%) / K10#
+4730 NEXT K%
+4740 K1# = (FF# - FI#) / S#
+4750 REM------ SCANSIONE IN FREQUENZA DELLA ESPRESSIONE COMPLESSA -----
+4760 PRINT : PRINT "     Calcolo dei" ; MAXITE%; " valori della scansione" : PRINT
+4770 F# = FI# : POKE LCC, 32 : ERN% = 0
+4780 K3# = 8.6858896381#
+4790 K4# = 114.5915590262#
+4800 POKE LCC, 32
+4810 FOR NF% = 1 TO MAXITE%
+4820 PRINT CHR$(11); CHR$(24); "PASSO N."; NF%
+4830 OM# = 2# * F# * PG#
+4840 FOR A% = 1 TO N.OP%
+4850 K$(A%) = V1$(A%)
+4860 V# = VAL(V2$(A%))
+4B70 OP$ = K$(A%)
+4880 IF OP$ = "R" THEN WRE#(A%) = V# : WIM#(A%) = 0 : GOTO 4910
+4890 IF OP$ = "C" THEN WRE#(A%) = 0 : WIM#(A%) = -1# / V# / OM# : GOTO 4910
+4900 IF OP$ = "L" THEN WRE#(A%) = O : WIM#(A%) = V# * OM#
+4910 NEXT A%
+4920 IF N.OP% = 1 THEN K$(1) = "=" : RR% = 1 : GOTO 5460
+4930 FOR IL% = N.OP% TO 0 STEP -1
+4940 IP% = IL% + 1
+4950 IF K$(IL%) = "(" THEN GOTO 4970
+4960 NEXT IL%
+4970 FOR J% = 0 TO MAXC%
+4980 NJ% = J% + 1
+4990 FOR KK% = IP% TO N.OP%
+5000 K% = KK%
+5010 C$ = LEFT$(K$(KK%), 1)
+5020 IF C$ = ")" THEN GOTO 5060
+5030 IF C$ <> CAT$(J%) THEN GOTO 5050
+5040 GOSUB 5090
+5050 NEXT KK%
+5060 NEXT J%
+5070 K$(IP% - 1) = " " : K$(K%) = " "
+5080 IF IP% = 1 THEN GOTO 5410 ELSE GOTO 4930
+5090 FOR L% = K% - 1 TO 1 STEP -1
+5100 PL% = L% : V% = ASC(K$(L%))
+5110 IF V% = 82 OR V% = 76 OR V% = 67 OR V% = 61 THEN GOTO 5140
+5120 NEXT L%
+5130 PRINT "!!! errore 121" : STOP
+5140 FOR L% = K% + 1 TO N.OP%
+5150 SL% = L% : V% = ASC(K$(L%))
+5160 IF V% = 82 OR V% = 76 OR V% = 67 OR V% = 61 THEN GOTO 5190
+5170 NEXT L%
+5180 PRINT "!!! errore 122" : STOP
+5190 A# = WRE#(PL%) : B# = WIM#(PL%)
+5200 C# = WRE#(SL%) : D# = WIM#(SL%)
+5210 ON NJ% GOTO 5220, 5270, 5300, 5330, 5360
+5220 PARZ# = ((A# * C# - B# * D#) * (A# + C#) + (A# * D# + B# * C#) * (B# + D#))
+5230 WRE#(K%) = PARZ# / ((A# + C#) * (A# + C#) * (B# + D#) * (B# + D#))
+5240 PARZ# = ((A# * D# + B# * C#) * (A# + C#) - (A# * C# - B# * D#) * (B# + D#))
+5250 WIM#(K%) = PARZ# / ((A# + C#) * (A# + C#) * (B# + D#) * (B# + D#))
+5260 GOTO 5380
+   5.270 WREM(KZ)"AM"CH-O".Otl                                                                                                 
+   5280 IHH"(KX)""AM.O,,·OMIICM                                                                                                
+   5290 GOI O 5380                                                                                                             
+   ~300 IolREM     (KX)     '" (AM"CM+O"110" ) / (C"IIC"+O"IIO"                  )                                             
+   ~310 l.'I H" ( KZ )"'1 8"IIC"· A!fIlO") I (C".C.HoMIIo,,)                                                                   
+   ~320 GOTO 5380                                                                                                              
+   ~330 WRE"(KZ)=A"'Cn                                                                                                         
+   531,0 l.'IMM(KZ)=O"'UM                                                                                                      
+   5350 LJO    f O 5380                                                                                                        
+   5360 WRlMtKZ)=A"                  C"                                                                                        
+   5370 IolIM"(KX'=OM-OIt                                                                                                      
+   ~,380 K.IK);)=           '"                                                                                                 
+   5390 K.(PLX)-                   :t<.(SL7.):-                                                                                
+   5400 RE.1URN                                                                                                                
+   5 ••10 FOR KX=I IO N.OP%                                                                                                    
+   51,20 RR7.z;K%                                                                                                              
+   ~t,30 lF K.(KZ) ••..·"                 THEN GOro 5460                                                                       
+   5440 NEXI K%                                                                                                                
+   5t,50PRIN           "tlt        e,.-,.-ol'"E' 123 :STOP                                                                     
+   5460 HE."21WREW(RR7.)                                                                                                       
+   ::'4/0 IM••.• ::IolIri••(RR7.)                                                                                              
+   51,80 MOL" l NF7.)"'K3"lIl0L(                 !:>QR (RE.""R~M'-IMlhIM"»)                                                    
+   ::'490 rASE."(NF:l)>::Kt,"IIAI~1                lMM/REtO                                                                    
+   '5500 ~l(lJ ••tNF7.)"'F"                                                                                                    
+   5~.10 1F AS.'" l tn                  rHEN F"=FH+SIEP~ •• E.LSE:F"=FM+-KUIILOG(NFr.+I)/K10tt                                 
+                                                                                                                               
+   'J~2U NEX'I NFi;                                                                                                            
+                                                                                                                               
+   5~30 PHIN1:POKE. lLL.13                                                                                                     
+   ::'540 REM- ----              INGRESSO PARAMETRi PU~ LA COS1HULIONE DEL GRAFICO                                    ----     
+   5550 MI""'10~38:HS"=                      10'-38                                                                            
+   'J~60 l'OR KX"'1            IO MAXIIE:;(                                                                                    
+   ~~70 TOTKM=MOL"(K %)                                                                                                        
+   5~80    H     101K"         -   "    THEfII   MIM     lolKM                                                                 
+   5590    H     10lKH)I"I~"             IHlN I"IS••"'IOTK"                                                                    
+    5600   NEXl Kr.                                                                                                            
+    5610   PHIM"10--38:PHS"""-1D.-38                                                                                           
+   ::'620  FOR 1<'%"'1lO MAXI 'Li:                                                                                             
+    ~6jO    l'OTKMs:FASE:."         (Kr.)                                                                                      
+   564()    IF -IO-TK"<PHI•• rHEN PHI"=10IKU                                                                                   
+    56~U    lf   rOH")PHSM                THEN PHS""'IOTK"                                                                     
    •..•
-      "60  NEXI K;C                                                                                                            6620 IF R7.=;2 THEN LPRINT -HOo.: -:               : GOSUO6770 : LPRINT H: FASE- : GOTO 6700
-    •.•610 PRINr CHR.(11):CHR.lll):CHR.(11),CHRt(11);CHR.(24)                                                                  6630 IF Rl("'3 THEN LPRIHT -(dB):~;                : GOSUO6770 : LPRINT -:(9r)·                            : GOTO 6700
-   5680    PRINl         VALORI ESfRlMI                  01 MODULOE FASE RISCONIRAII                      NlL CALCOLO :-       6640 IF FOINT(f)            THEN LPRINTH            :~;:GOSUO 6770:LPRINIH:                           H:GOTO 6700
-   5690    f'R1NI        MI· -:CSNGIMlli):-(dO)-:rA8(30):-PHl'"                             ·;CSNG(PHI,,),-(gl'")              6650 OATOH"""H2"-RXIISTEPH"
-   ::,700  PRIN! "MS"" ~:CSNG(MSM): '(dO)-:TA8(30);-PH5'"                                   -:CSNGIPHS"):-<g,.-)~              6660 IF AOS(oATOM")(10           THEN FH•• ~"".":-            ELSE FH.·H ••••••••:~
-   5/10    "1""'M1"          : M2".M5"            : PH1"""PHIM : f'H2tt=PHSN                                                   6670 OATPH"=PH2"-RX.STEPPHM
-   ~/20 f'R]NI:PRINl                          - lnt,.-odtJCI       glt     esl:t'"l?mt d! g,.-••.rlca:.-tone                   6680 IF AOS(OATPH")(10           THEN FP$••.-: ••••• It~ ElSE FP'·H:""M"~
-   5J3U "'OKE LCC. '3                                                                                                          6690 LPRINT USING FH$:OATOHN: : GOSUB 6770 : LPRIHT USING FPt:oATPHM
-   ~/ •• U llNE      INPUI           HOOULO INrERI0RE                  (dO).:';'      ·;H1$                           •        6700 NEXT RX : LPRINT ~                +~:STRING$(8.--~);AS.;
+      "60  NEXI K;C                                                                                                            
+    •.•610 PRINr CHR.(11):CHR.lll):CHR.(11),CHRt(11);CHR.(24)                                                                  
+   5680    PRINl         VALORI ESfRlMI                  01 MODULOE FASE RISCONIRAII                      NlL CALCOLO :-       
+   5690    f'R1NI        MI· -:CSNGIMlli):-(dO)-:rA8(30):-PHl'"                             ·;CSNG(PHI,,),-(gl'")              
+   ::,700  PRIN! "MS"" ~:CSNG(MSM): '(dO)-:TA8(30);-PH5'"                                   -:CSNGIPHS"):-<g,.-)~              
+   5/10    "1""'M1"          : M2".M5"            : PH1"""PHIM : f'H2tt=PHSN                                                   
+   ~/20 f'R]NI:PRINl                          - lnt,.-odtJCI       glt     esl:t'"l?mt d! g,.-••.rlca:.-tone                   
+   5J3U "'OKE LCC. '3                                                                                                          
+   ~/ •• U llNE      INPUI           HOOULO INrERI0RE                  (dO).:';'      ·;H1$                           •        
    575U lF HU=-                  ANO MT""'M2" rHEN PRINT CHR.(11):CHR.(24)::GOI0                                5/40
-                                                                                                                               6710 LPRINT STRIHG.(HAXITEX-11,               ~-~) ;-+ Max"
-   5760 IF M'."'--                THEN Goro 5790                                                                               6720 LPRINT USING ~•••••••••••••••••••••••••H ,FREG"('I);
-   5/70    lNPUI -MODULO SUPERIORE (da)                                  :-,TH2M                                               6730 LPRINT - H:-:TAO(HAXITEX-3):
-   5/80    Ml""'VAL(Hl.):M2M=TH21t                                                                                             6740 LPRINT USING ~"".""",,"'''''''''''''-;FREQ''(f'IAXITE;();
-   5/90    IF M2"<=HU                THEN PRINl CHR$( 11) :CHR.(24) :CHR$( 11) :C.HR.(24):                          :GOIO 5740 6750 LPRINT ~ Hz- :LPRIN'r:LPRINT:LPRINT:Lf'RINT:LPRINT
-   5BOlJ STE.PM"=(M2"-Ml")/(MAXRZ                            1)                                                                6760 FOR Kl(-1 TO 16000: NEXT KX : LPRINT CHR$ (27) : -c -                                 GOTO 6270
-   5810 f'RINl                                                                                                                 6770 IF F""IHHF)          'THEH RIGA."'RIGA1t        ElSE RIGAt"RIGA2t
-   5820 UNE. INPUl "FASE. JNFERIORE.                                   (g,.-)":l      ",PHH                                    6780 FOR Cr."l      TO MAXITEX : Ct-MIO$( RIGAt. Cl(.l)
-   5830 IF PHl$="H ANO PH1••.;::f'H~'" THEN PRINI' CHR$( 11) ;CHR$(24): :GOTO 5820                                             6790 Hl(-HAXRX-INT( (HOL"(Cr.)-Hl")/SrEPM")-l
-   5840 IF PHH::H-                 THEN GOI0 5870                                                                              6800 IF RX=O THEN IF Mr.(O lHEN C$""~"'~ : GOTO 6830
-   5850 INPUT ·FASE SUPERIORI:.                               (gr):,          rPH2"                                            6810 IF HX=RX THEN C.·~.~            : GOTO 6830
-   5860 PH1H·VAl(PHI'I)                   :PH2""'lPH2H                                                                         6820 IF" RX"'MAXRX-1 THEN IF Hl()MAXRX-1 lHEN C•• -\l~
-   5870 IF PH2"(=PH1"                     THEN PRINT CHR.( 11':1 HA.(24) ;CHR$(11) :CHR$(24): :130TO 5820                      6830   PX"'HAXRX-INT< <FASE.t<CX) -PH1") ISTEPPH")-1
-   5880 POKE LCC. 32                                                                                                            6840  IF RX=O THEH lF Pr.(O THEN C.=- .••.            - : GOTO 6880
-   5890 5 rE.PPH"""(PH2"-PH1M) I (HAXA:t-l)                                                                                     68:50 IF Pr."'R:t THEN Ct",~r~       : GOTO 6870
-   5900 PRlNT                                                                                                                   6860  IF R:l"'MAXRr.-1 THEN IF PX)HAXRX-l                 THEN Ct-~v-            : GOTO 6880
-   5910 REH- ----                - PRESENIAZIONE su VIDEO DEL GRAFICO MODULOE FASE ----                                         6870  IF HX"'Pr. THEN IF HX-RX ANO MX)=O ANO MX(MAXRi:: THEN C$",HX"
-   5920 PRINI CHR.(26),                                                                                                         6880  SU·SH+C$          : NEXT CX : LPRINT SU;                : RETURN
+                                                                                                                               
+   5760 IF M'."'--                THEN Goro 5790                                                                               
+   5/70    lNPUI -MODULO SUPERIORE (da)                                  :-,TH2M                                               
+   5/80    Ml""'VAL(Hl.):M2M=TH21t                                                                                             
+   5/90    IF M2"<=HU                THEN PRINl CHR$( 11) :CHR.(24) :CHR$( 11) :C.HR.(24):                          :GOIO 5740 
+   5BOlJ STE.PM"=(M2"-Ml")/(MAXRZ                            1)                                                                
+   5810 f'RINl                                                                                                                 
+   5820 UNE. INPUl "FASE. JNFERIORE.                                   (g,.-)":l      ",PHH                                    
+   5830 IF PHl$="H ANO PH1••.;::f'H~'" THEN PRINI' CHR$( 11) ;CHR$(24): :GOTO 5820                                             
+   5840 IF PHH::H-                 THEN GOI0 5870                                                                              
+   5850 INPUT ·FASE SUPERIORI:.                               (gr):,          rPH2"                                            
+   5860 PH1H·VAl(PHI'I)                   :PH2""'lPH2H                                                                         
+   5870 IF PH2"(=PH1"                     THEN PRINT CHR.( 11':1 HA.(24) ;CHR$(11) :CHR$(24): :130TO 5820                      
+   5880 POKE LCC. 32                                                                                                           
+   5890 5 rE.PPH"""(PH2"-PH1M) I (HAXA:t-l)                                                                                    
+   5900 PRlNT                                                                                                                  
+   5910 REH- ----                - PRESENIAZIONE su VIDEO DEL GRAFICO MODULOE FASE ----                                        
+   5920 PRINI CHR.(26),                                                                                                        
+5980 IF K:t/5"'INT(Kr.IS)        THEN RIGA."'RIGAU               ElSE RIGA''''RIGA2.
+~990 PRINT FNPC$(Kit:.INr.) ;RIGA$ : NEXT KX
+6000 PRINT FNPC'(2.0);"MOD.·               : PRINT FNPC'(3.0);H(dB)-
+60"10 PAINT FNPC.(2.PFINit:+l);"FASE"                 : PRINT FNPC$(3.PFlNl(+I):                    '(g"-)-
+6020 FOR IR';"'O TO MAXRZ-1 STEP 5
+6030 OATOH"=M2"-IRXIISTEPM"
+6040 IF ABS<OATOM")( 10 THEN FORM.=-N ••••• - ELSE FORH."'-" ••••M~
+6050 PRINT FNPC.(lRX.OhUSING                FORH.:DATOH"
+6060 oA1PHM"'PH2"-IRr.IISIEPPH"
+6070 IF ABS(OATPH")( 10 THEN FOR'U=~HH."~                        ELSE FORH.""-IU •••••-
+6080 PRINT FNPC.( IAX.MAXITEr.+PINX+2)                 :USING FORH.,OATPH"
+6090 NEXT IRi::
+6100 PRINT FNPC'(HAXRi::+1.0) ;USING "1t••••• It" ••·,.                   ":FREQ ••( 1):
+61-10 PRINT - Hz",TAO(MAXITEit:-l):
+6120 PRINT USING - •••••••••••••.v····.. -;FREQ ••(MAXITEr.);
+6130 PRINT FNPC$(MAXRX+l,MAXlTEX+6),~                     H=~
+6140 PRINT FNPC.(HAXRX.PINX+9) ;AS$
+6150 FOR K7.""l TO l'1AXITEX
+6160 HX"'MAXR;(-INT< (MOL"(Kit:)-H1")/STEPMM)--1
+6170 IF HX)MAXRX-l THEN IRr.=HAXRZ-1 : C$"'~v-                              GOTO 6190
+6180 Ho HX(O lHEN IR;(=O : C.=~·'"               ELSE IRiC"'Hi::            C'=-IlI-
+6190 PRINT FNPC'(lR7..Kr.+PINX):Ct
+6200 P;.::
+         .••HAXR%-INI'«FASEH(K:U           PHI")/STl..PPHH)            I
+6210 lF PZ'HAXRi::-l         T'HEN HO. M"Ak,.          •••.•             , uvlO 6230
+6220 IF P7.(O rHEN IR;(zO : C$""-"-              ELSE IRi::"'P;( : c'.-r~
+6230 IF MX=Pi:: ANO HX)=O ANO Hi::(HAXR:l THEN IR:l:a:Hl( : C.= x·
+6240 PRINT FNPC$( IRX.KX+PINX) ,c.
+62S0 N XT KX
+6260 PRINT FNPC.(HAXRX .PF1NZ+ 1); ~ max-
+6270 POKE LCC.13 : PRINT FNPC.(HAXRX+1.32);-C/F/G/S/E/M                                       ? •
+6280 R''''INPUH(l)          : IF INSTR(·CFGSEH·,R$)=O                 HiEN GOTO 6280
+6290 IF R,,,,"CH THEN GOTO 6560
+6300 IF R.="FH        THEN GOTO 63BO ELSE PRINl CHR.(26)
+63-10 IF Rt"'~E~ THEN GOTO 3850
+6320 IF Rt=-S~        THEN PRINT -ripetizIOne                dlrll~      scanslonlr~:OPZX"'1:GOTO               6350
+6330 IF R.=·~GH THEH PRIHT ~rlplrt              IZlone       del    gr~rlco-:OPZl(""2:GOTO                6350
+6340 ERASE CATt.V1t.V2$.IolRE".loIIH".K              •• MoLM,FASE".FREQ"                 : GOTO 90
+6350 PRINT:PRINT          ~EXPR • H:LEF"T.(AT'.LEN(AH)-l)                     :PRINT:PRINT
+6360 ON OPZX GOTO 4620.5680
+6370 REH-------         PHESENTAZIONE DATI PUNTUALI ------------------
+6380 'POKE LCC.32:PCr.=PINX·tl         :PCVX"'PCX:PRINT FNPC'(HAXR%+1.0) ,CHR$(24):
+6390 GOTO 6440
+6400 PCVit:=PC" : R.""INPUr.(1)            : R"""ASC<R.)
+6410 IF Rr.""11 THEN GOTO 6500
+6420 IF RX:8 lHEH PC:t""PCVX-1 : IF PCX(PINr.+l                          THEN PCr..PFINr.-l
+6430 IF R;("'14 THEN PCX.PCVl(+l            : IF PCl()PFINl(-'l             THEN PCl(zPINX" I
+6440 PRINT FNPC. (HAXRX. PCVX) ; - -~ ; FNPC. (HAXRX. PINX+9) ; AS.
+6450 PRINT FNPC$(HAXRX. PCX) ; CHR. (31 ) ,CHRt (7)
+6460 PRINT FHPCt(HAXRit:+·1.4),-r,.-eq             "'-:USIHG        - ••••••• MM"M••'·.•.•.•. ··~:FREQ'HPCX-PIN7.)
+6470 PRIfliT FHPC.(HAXRX+l.32);"",od               ·-;USING         - ••••••••••••••••••..
+                                                                                        M· •.•-'HoL    ••(PCr.-PIN:l)
+6'.80 PRINT FNPC$(HAXRX+l.57);-rasE'                 =",USING         • ••••• tH.NM••••" •..•..•..
+                                                                                                 -;FASE ••(PC7.-PINl()
+6490 GOTO 6400
+6500 PRINT FNPC. (MAXRr.. PCX) ; - - - : FNPC. (HAXRil:, PINX+9) ; ASt
+65'10 PRINT FNPC. (HAXRX+1 • O) : CHR. (24) ; USING ~NH••• M••••·.•.                 M ••••-;   FREli" ( 1) ;
+6520 PRlHT - Hz~;TAB(HAXITE:t);
+6530 PRIHT USING ~H••••••••••••..•••••••.. ~:FREQ••(HAXITEX):
+6540 PRINT FHPC.(HAXRX+l.HAXITEr.+6):-                    Hz- : GOTO 6270
+65:50 REH-------        STAHPA DEL GRAFICO ---------------------------
+6560 LPRINT : LPRIHT CHRt(27):~[1·)~;CHR.(27);70~;CHR.(27>:~73~
+6570 LPRINT : LPRINT : LPRIHT
+6580 lPR INT TA8 (15); ~RAPPRESENTAZIONE IN MODULOE FASE DELLA RETE
+6590 LPRINT : lPRINT lEFU(ATt.LEN(ATt)-·I)                          : LPRINT
+6600 POKE LCC.32 : PRINT FNPC$(HAXRX+l,32);SPACE.(15)
+6610 FOR RX=O TO HAXR7.-1 : F.RX/5                 : STt,.--
+6620 IF R7.=;2 THEN LPRINT -HOo.: -:               : GOSUO6770 : LPRINT H: FASE- : GOTO 6700
+6630 IF Rl("'3 THEN LPRIHT -(dB):~;                : GOSUO6770 : LPRINT -:(9r)·                            : GOTO 6700
+6640 IF FOINT(f)            THEN LPRINTH            :~;:GOSUO 6770:LPRINIH:                           H:GOTO 6700
+6650 OATOH"""H2"-RXIISTEPH"
+6660 IF AOS(oATOM")(10           THEN FH•• ~"".":-            ELSE FH.·H ••••••••:~
+6670 OATPH"=PH2"-RX.STEPPHM
+6680 IF AOS(OATPH")(10           THEN FP$••.-: ••••• It~ ElSE FP'·H:""M"~
+6690 LPRINT USING FH$:OATOHN: : GOSUB 6770 : LPRIHT USING FPt:oATPHM
+6700 NEXT RX : LPRINT ~                +~:STRING$(8.--~);AS.;
+6710 LPRINT STRIHG.(HAXITEX-11,               ~-~) ;-+ Max"
+6720 LPRINT USING ~•••••••••••••••••••••••••H ,FREG"('I);
+6730 LPRINT - H:-:TAO(HAXITEX-3):
+6740 LPRINT USING ~"".""",,"'''''''''''''-;FREQ''(f'IAXITE;();
+6750 LPRINT ~ Hz- :LPRIN'r:LPRINT:LPRINT:Lf'RINT:LPRINT
+6760 FOR Kl(-1 TO 16000: NEXT KX : LPRINT CHR$ (27) : -c -                                 GOTO 6270
+6770 IF F""IHHF)          'THEH RIGA."'RIGA1t        ElSE RIGAt"RIGA2t
+6780 FOR Cr."l      TO MAXITEX : Ct-MIO$( RIGAt. Cl(.l)
+6790 Hl(-HAXRX-INT( (HOL"(Cr.)-Hl")/SrEPM")-l
+6800 IF RX=O THEN IF Mr.(O lHEN C$""~"'~ : GOTO 6830
+6810 IF HX=RX THEN C.·~.~            : GOTO 6830
+6820 IF" RX"'MAXRX-1 THEN IF Hl()MAXRX-1 lHEN C•• -\l~
+6830   PX"'HAXRX-INT< <FASE.t<CX) -PH1") ISTEPPH")-1
+ 6840  IF RX=O THEH lF Pr.(O THEN C.=- .••.            - : GOTO 6880
+ 68:50 IF Pr."'R:t THEN Ct",~r~       : GOTO 6870
+ 6860  IF R:l"'MAXRr.-1 THEN IF PX)HAXRX-l                 THEN Ct-~v-            : GOTO 6880
+ 6870  IF HX"'Pr. THEN IF HX-RX ANO MX)=O ANO MX(MAXRi:: THEN C$",HX"
+ 6880  SU·SH+C$          : NEXT CX : LPRINT SU;                : RETURN
