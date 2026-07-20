@@ -543,9 +543,9 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 5430 IF K$(K%) = "=" THEN GOTO 5460
 5440 NEXT K%
 5450 PRINT "!!! errore 123" : STOP
-5460 HE."21WREW(RR7.)                                                                                                       
-   ::'4/0 IM••.• ::IolIri••(RR7.)                                                                                              
-   51,80 MOL" l NF7.)"'K3"lIl0L(                 !:>QR (RE.""R~M'-IMlhIM"»)                                                    
+5460 RE# = WRE#(RR%)
+5470 IM# = WIM#(RR%)
+5180 MDL#(NF%) = K3# * LOG(SQR(RE# * RE# + IM# * IM#))
    ::'490 rASE."(NF:l)>::Kt,"IIAI~1                lMM/REtO                                                                    
    '5500 ~l(lJ ••tNF7.)"'F"                                                                                                    
    5~.10 1F AS.'" l tn                  rHEN F"=FH+SIEP~ •• E.LSE:F"=FM+-KUIILOG(NFr.+I)/K10tt                                 
