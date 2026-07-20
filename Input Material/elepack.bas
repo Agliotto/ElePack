@@ -445,8 +445,8 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 4450 PRINT "!!! errore 112" : GOTO 3880
 4460 IF C1% <> 82 AND C1% <> 76 AND C1% <> 67 THEN PRINT "!!! errore 113" : GOTO 3880
 4470 IF C2% = 41 THEN GOTO 4520
-4480 FOR AX=O TO HAXCX
-4490 IF C2X=ASC(CATS(AX»                  THEN GOTO .1,520
+4480 FOR A% = 0 TO MAXC%
+4490 IF C2% = ASC(CAT$(A%)) THEN GOTO 4520
 4500 NEXT A%
 4510 PRINT "!!! errore 114" : GOTO 3880
 4520 NEXT J%
@@ -464,7 +464,7 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 4640 IF FI# < 0 THEN PRINT CHR$(11); CHR$(24); : GOTO 4630
 4650 INPUT "FREQUENZA FINALE (Hz) :"; FF#
 4660 IF FF# <= FI# THEN PRINT CHR$(11); CHR$(24); CHR$(11); CHR$(24); : GOTO 4630
-4670 INPUT "ASCISSA LIN/LOG          :" ; AS$
+4670 INPUT "ASCISSA LIN/LOG          :"; AS$
 4680 IF AS$ = "LIN" THEN AS$ = "lin" : STEPF# = (FF# - FI#) / (MAXITE% - 1) : GOTO 4760
 4690 IF AS$ <> "LOG" THEN PRINT CHR$(11) : CHR$(24); : GOTO 4670
 4700 AS$ = "log" : S# = O : K10# = LOG(10#)
@@ -524,26 +524,26 @@ B80 IF VS(N1%) = VC THEN VN%(N1%) = VN%(N1%) + 1 : GOTO 830
 5240 PARZ# = ((A# * D# + B# * C#) * (A# + C#) - (A# * C# - B# * D#) * (B# + D#))
 5250 WIM#(K%) = PARZ# / ((A# + C#) * (A# + C#) * (B# + D#) * (B# + D#))
 5260 GOTO 5380
-   5.270 WREM(KZ)"AM"CH-O".Otl                                                                                                 
-   5280 IHH"(KX)""AM.O,,·OMIICM                                                                                                
-   5290 GOI O 5380                                                                                                             
-   ~300 IolREM     (KX)     '" (AM"CM+O"110" ) / (C"IIC"+O"IIO"                  )                                             
-   ~310 l.'I H" ( KZ )"'1 8"IIC"· A!fIlO") I (C".C.HoMIIo,,)                                                                   
-   ~320 GOTO 5380                                                                                                              
-   ~330 WRE"(KZ)=A"'Cn                                                                                                         
-   531,0 l.'IMM(KZ)=O"'UM                                                                                                      
-   5350 LJO    f O 5380                                                                                                        
-   5360 WRlMtKZ)=A"                  C"                                                                                        
-   5370 IolIM"(KX'=OM-OIt                                                                                                      
-   ~,380 K.IK);)=           '"                                                                                                 
-   5390 K.(PLX)-                   :t<.(SL7.):-                                                                                
-   5400 RE.1URN                                                                                                                
-   5 ••10 FOR KX=I IO N.OP%                                                                                                    
-   51,20 RR7.z;K%                                                                                                              
-   ~t,30 lF K.(KZ) ••..·"                 THEN GOro 5460                                                                       
-   5440 NEXI K%                                                                                                                
-   5t,50PRIN           "tlt        e,.-,.-ol'"E' 123 :STOP                                                                     
-   5460 HE."21WREW(RR7.)                                                                                                       
+5270 WRE#(K%) = A# * C# - B# * D#
+5280 WIM#(K%) = A# * D# + B# * C#
+5290 GOTO 5380
+5300 WRE#(K%) = (A# * C# + B# * D#) / (C# * C# + D# * D#)
+5310 WIM#(K%) = (B# * C# - A# * D#) / (C# * C# + D# * D#)
+5320 GOTO 5380
+5330 WRE#(K%) = A# + C#
+5340 WIM#(K%) = B# + D#
+5350 GOTO 5380
+5360 WRE#(K%) = A# - C#
+5370 WIM#(K%) = B# - D#
+5380 K$(K%) = "="
+5390 K$(PL%) = " " : K$(SL%) = " "
+5400 RETURN
+5410 FOR K% = 1 TO N.OP%
+5420 RR% = K%
+5430 IF K$(K%) = "=" THEN GOTO 5460
+5440 NEXT K%
+5450 PRINT "!!! errore 123" : STOP
+5460 HE."21WREW(RR7.)                                                                                                       
    ::'4/0 IM••.• ::IolIri••(RR7.)                                                                                              
    51,80 MOL" l NF7.)"'K3"lIl0L(                 !:>QR (RE.""R~M'-IMlhIM"»)                                                    
    ::'490 rASE."(NF:l)>::Kt,"IIAI~1                lMM/REtO                                                                    
